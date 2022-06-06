@@ -1,8 +1,8 @@
 const app = new Vue({
     el : "#app",
     data:{
-        email_utente0:"",
-        email_utente1:"",
+        email: []
+/*         email_utente1:"",
         email_utente2:"",
         email_utente3:"",
         email_utente4:"",
@@ -10,18 +10,19 @@ const app = new Vue({
         email_utente6:"",
         email_utente7:"",
         email_utente8:"",
-        email_utente9:""
+        email_utente9:"" */
     },
 
     mounted(){
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-        .then((result) => {
-            const risultato = result.data.response;
-            console.log(risultato);
-            this.email_utente0=risultato;
-        });
-
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+        for (let i = 0; i < 10; i++) {
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+            .then((result) => {
+                const risultato = result.data.response;
+                console.log(risultato);
+                this.email.push(risultato);
+            });
+        }
+        /* axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
         .then((result) => {
             const risultato = result.data.response;
             console.log(risultato);
@@ -82,6 +83,6 @@ const app = new Vue({
             const risultato = result.data.response;
             console.log(risultato);
             this.email_utente9=risultato;
-        });
+        }); */
     }
 }); 

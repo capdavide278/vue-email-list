@@ -11,8 +11,8 @@
 
         <div>
             <ul>
-                <li>{{email_utente0}}</li>
-                <li>{{email_utente1}}</li>
+                <li v-for = "(element, i) in email" :key="i">{{element}}</li>
+<!--                 <li>{{email_utente1}}</li>
                 <li>{{email_utente2}}</li>
                 <li>{{email_utente3}}</li>
                 <li>{{email_utente4}}</li>
@@ -20,7 +20,7 @@
                 <li>{{email_utente6}}</li>
                 <li>{{email_utente7}}</li>
                 <li>{{email_utente8}}</li>
-                <li>{{email_utente9}}</li>
+                <li>{{email_utente9}}</li> -->
             </ul>
         </div>
     </div>    
