@@ -9,9 +9,9 @@
 <body>
     <div id="app">
 
-        <div>
+        <div v-if="email_utente.length === 10">
             <ul>
-                <li  v-if="email_utente.length === 10" v-for = "(element, i) in email_utente" :key="i">{{element}}</li>
+                <li v-for = "(element, i) in email_utente" :key="i">{{element}}</li>
 <!--                 <li>{{email_utente1}}</li>
                 <li>{{email_utente2}}</li>
                 <li>{{email_utente3}}</li>
