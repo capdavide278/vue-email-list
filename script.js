@@ -1,7 +1,7 @@
 const app = new Vue({
     el : "#app",
     data:{
-        email: []
+        email_utente: []
 /*         email_utente1:"",
         email_utente2:"",
         email_utente3:"",
@@ -19,7 +19,7 @@ const app = new Vue({
             .then((result) => {
                 const risultato = result.data.response;
                 console.log(risultato);
-                this.email.push(risultato);
+                this.email_utente.push(risultato);
             });
         }
         /* axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
